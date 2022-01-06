@@ -44,11 +44,16 @@ echo $tableauDe2Dimensions[2][0]; // 7
 // Ces chaines de caractère sont ecrites en snake_case, tout en minuscules
 
 $professeur = [
-    'prenom' => 'Arthur',
-    'nom' => 'Weill',
-    'age' => 35
+	'prenom' => 'Arthur',
+	'nom' => 'Weill',
+	'age' => 35,
+	'permis_de_conduire' => true
 ];
 
 $phrase = '';
-$phrase .= 'le professeur s\'appelle';
-$phrase .= $professeur['prenom']
+$phrase .= 'Le professeur s\'appelle ';
+$phrase .= $professeur['prenom'] . ' ';
+$phrase .= $professeur['nom'] . ' ';
+$phrase .= ' et il a ' . $professeur['age'] . ' ans';
+
+echo '<p>' . $phrase . '</p>';
